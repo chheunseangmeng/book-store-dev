@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">  
+    <title>About Magic book </title>
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div class="nav-container">
+      <img src="../image/my-logo.png" alt="Logo">
+      <nav>
+          <ul class="menu">
+              <li><a href="../index.html" >Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./contact.html " class="active" >Contact</a></li>
+          </ul>
+      </nav>
+      <div class="search">
+          <input type="search" placeholder="Search" class="search-input">
+          <button class="btn">Sign up pro <i class="fa-solid fa-user-plus"></i></button>
+          <button class="dark-mode"><i class="fa-solid fa-sun"></i></button>
+      </div>
+      <!-- Hamburger Icon for mobile view -->
+      <button id="menuIcon" onclick="toggleMenu()">
+        <i class="fa fa-bars" id="hamburgerIcon"></i>  <!-- Hamburger icon -->
+        <i class="fa fa-times" id="closeIcon" style="display: none;"></i>  <!-- X icon (hidden by default) -->
+    </button>
+  </div>
+
+
+ 
+    <div class="container-form">
+      <div class="wrapper">
+        <form action="#">
+          <h2>Login</h2>
+          <div class="input-field">
+            <input type="text" required>
+            <label>Enter your email</label>
+          </div>
+          <div class="input-field">
+            <input type="password" required>
+            <label>Enter your password</label>
+          </div>
+          <div class="forget">
+            <label for="remember">
+              <input type="checkbox" id="remember">
+              <p>Remember me</p>
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button class="btn-sign" type="submit">Log In</button>
+          <div class="register">
+            <p>Don't have an account? <a href="#">Register</a></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="sign-up">
+        <h1>Sign in</h1>  
+        <div class="sign-icon">
+          <i class="fa-brands fa-apple"></i>
+          <i class="fa-brands fa-google"></i>
+          <i class="fa-solid fa-envelope"></i>
+          <i class="fa-brands fa-telegram"></i>
+        </div>
+        <div class="group-sign">
+          <label for="username"> Username</label> <br>
+          <input type="text" name="username" class="username" placeholder="username" required>
+        </div>
+        <div class="group-sign">
+          <label for="email"> Email</label> <br>
+          <input type="text" name="email" class="email" placeholder="email" required>
+        </div>
+        <div class="group-sign">
+          <label for="password"> Password</label> <br>
+          <input type="text" name="password" class="password" placeholder="password" required>
+        </div>
+        <button class="btn-sign" type="submit"> Sign in</button>
+      </div>
+    </div>
+
+    <script src="../main.js"></script>
+  
+</body>
+</html>

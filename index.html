@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Magic Book</title>
+</head>
+
+<body>
+    <!-- Navigation Container -->
+    <div class="nav-container">
+        <img src="./image/my-logo.png" alt="Logo">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about/about.html">About</a></li>
+                <li><a href="about/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="search" placeholder="Search" class="search-input">
+            <button class="btn">Sign up pro <i class="fa-solid fa-user-plus"></i></button>
+            <button class="dark-mode"><i class="fa-solid fa-sun"></i></button>
+        </div>
+        <!-- Hamburger Icon for mobile view -->
+        <button id="menuIcon" onclick="toggleMenu()">
+            <i class="fa fa-bars" id="hamburgerIcon"></i>  <!-- Hamburger icon -->
+            <i class="fa fa-times" id="closeIcon" style="display: none;"></i>  <!-- X icon (hidden by default) -->
+        </button>
+        
+    </div>
+    
+
+    <!-- Header Section -->
+    <header class="scroll-reveal">
+        <div class="letter">
+            <h1 style="margin-bottom: 30px; line-height: 50px;">LING - ELECTRONIC <br> BOOK STORE</h1>
+            <p>សូមស្វាគមន៍មកកាន់ពិភពនៃការអភិវឌ្ឍន៍គេហទំព័រ! សៀវភៅនេះណែនាំអ្នកតាមរយៈបច្ចេកវិទ្យាគេហទំព័រសំខាន់ៗ ចាប់ពី <span>HTML</span> និង <span>CSS</span> ដល់ក្របខ័ណ្ឌ <span>Javascript</span> ទំនើប និងប្រព័ន្ធខាងក្រោយ។ មិនថាអ្នកជាអ្នកចាប់ផ្តើមដំបូង ឬជាអ្នកជំនាញនោះទេ ការណែនាំនេះនឹងជួយអ្នកឱ្យឈានទៅមុខក្នុងទិដ្ឋភាពឌីជីថលដែលកំពុងរីកចម្រើនយ៉ាងឆាប់រហ័ស។ ចូរចាប់ផ្តើមបង្កើតអនាគតនៃគេហទំព័រ!</p>
+        </div>
+        <div class="head-galla">
+            <img src="image/world.png" alt="World Image">
+        </div>
+    </header>
+
+    <!-- Book Categories Section -->
+    <div class="container scroll-reveal">
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>Tech - Book</p>
+                <a href="#"><img src="image/book.jpeg" alt="Tech Book"></a>
+                <button class="free">Read for Free</button>
+            </div>
+        </div>
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>Programming Languages</p>
+                <a href="#"><img src="image/programing.png" alt="Programming Book"></a>
+                <button class="free">Read for Free</button>
+            </div>
+        </div>
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>Artificial Intelligence</p>
+                <a href="#"><img src="image/AI.webp" alt="AI Book"></a>
+                <button class="free">Read for Free</button>
+            </div>
+        </div>
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>Java</p>
+                <a href="#"><img src="image/sec-java.webp" alt="Java Book"></a>
+                <button class="free">Read for Free</button>
+            </div>
+        </div>
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>Python</p>
+                <a href="#"><img src="image/python.png" alt="Python Book"></a>
+                <button class="free">Read for Free</button>
+            </div>
+        </div>
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>PHP</p>
+                <a href="#"><img src="image/php.png" alt="PHP Book"></a>
+                <button class="free">Read for Free</button>
+            </div>
+        </div>
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>Cyber Security</p>
+                <a href="#"><img src="image/cyber.jpeg" alt="Cyber Security Book"></a>
+                <button class="premium">Unavailable <i class="fa-solid fa-star-and-crescent"></i></button>
+            </div>
+        </div>
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>Hacking & Cracking</p>
+                <a href="#"><img src="image/hack.jpg" alt="Hacking Book"></a>
+                <button class="premium">Unavailable <i class="fa-solid fa-star-and-crescent"></i></button>
+            </div>
+        </div>
+        <div class="content scroll-reveal">
+            <div class="card">
+                <p>Crypto & Forex-Trading</p>
+                <a href="#"><img src="image/sec-forex.avif" alt="Crypto Book"></a>
+                <button class="premium">Unavailable <i class="fa-solid fa-star-and-crescent"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container (Founder Info) -->
+        <section class="section-1 scroll-reveal" >
+            <div class="main-container scroll-reveal">
+                <div class="my-pic scroll-reveal">
+                    <img src="./image/meee.jpg" alt="Founder Image">
+                </div>
+                <div class="script">
+                    <div class="title-me">LING E-BOOK FOUNDER</div>
+                    <div class="about-me">
+                        <p>សួស្តីអ្នកអានគ្រប់ស្រទាប់វណ្ណៈ ខ្ញុំបាទឈ្មោះ​​​ <span>ឈឺន​ សៀវម៉េង​</span> ជាអ្នកបង្កើតសៀវភៅដែលមានចំណង់ចំណូលចិត្តយ៉ាងជ្រាលជ្រៅចំពោះបច្ចេកវិទ្យា និងការចងក្រងសៀវភៅ។ ខ្ញុំចូលចិត្តស្វែងយល់ពីរបៀបដែលការច្នៃប្រឌិតឌីជីថលបង្កើតការនិទានរឿងរបស់យើង និងវិធីដែលយើងភ្ជាប់ជាមួយគំនិត។ តាមរយៈការលាយបញ្ចូលគ្នានូវបច្ចេកទេសបង្កើតសៀវភៅបែបបុរាណជាមួយនឹងបច្ចេកវិទ្យាទំនើប ខ្ញុំមានបំណងបង្កើតបទពិសោធន៍នៃការអានតែមួយគត់ ដែលស្របនឹងទស្សនិកជនដែលយល់អំពីបច្ចេកវិទ្យានាពេលបច្ចុប្បន្ននេះ។</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Promotion Section -->
+    <div class="hold scroll-reveal">
+        <div class="left-shape scroll-reveal"></div>
+        <div class="collect scroll-reveal">
+            <div class="cele">
+                <img src="image/celebrate.png" alt="Celebrate Image">
+                <div class="pchum">
+                    <p class="happy">សិរីសួស្ដីពិធីបុណ្យចូលឆ្នាំថ្មី​ ប្រពៃណីខ្មែរ</p>
+                    <p class="border">បញ្ចុះតម្លៃ 70%</p>
+                    <p class="hide">ទាញយកអត្ថប្រយោជន៍ពីការលក់សៀវភៅ ** បញ្ចុះតម្លៃ 70% របស់យើង! ក្នុងរយៈពេលកំណត់ អ្នកអាចរីករាយនឹងការសន្សំប្រាក់យ៉ាងច្រើនលើការជ្រើសរើសសៀវភៅជាច្រើន។ មិនថាអ្នកកំពុងស្វែងរករឿងប្រឌិត រឿងមិនប្រឌិត ឬអ្វីដែលថ្មីដើម្បីស្វែងយល់នោះទេ នេះគឺជាឱកាសដ៏ល្អឥតខ្ចោះដើម្បីចាប់យកការអានបន្ទាប់របស់អ្នកក្នុងតម្លៃប្រភាគ។ ប្រញាប់ឡើង ការផ្តល់ជូនមិនយូរទេ!</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-shape scroll-reveal"></div>
+    </div>
+
+    <!-- Contact Us Button -->
+    <section>
+        <button class="link-con "><a href="./about/contact.html" style="color: black;">Contact Us Now!</a></button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <ul class="first-ul">
+            <li><div><a href="https://www.facebook.com/SEAV11112222?mibextid=LQQJ4d"><i class='bx bxl-facebook'></i></a></div></li>
+            <li><div><a href="https://www.tiktok.com/@seavtheonlyone?_t=8qJePGDjKfi&_r=1"><i class='bx bxl-tiktok'></i></a></div></li>
+            <li><div><a href=""><i class='bx bxl-telegram'></i></a></div></li>
+            <li><div><a href="https://www.youtube.com/@seavmengzz"><i class='bx bxl-youtube'></i></a></div></li>
+            <li><div><a href=""><i class='bx bxl-twitter'></i></a></div></li>
+            <li><div><a href=""><i class='bx bxl-linkedin'></i></a></div></li>
+        </ul>
+        <ul class="second-ul">
+            <li id="social"><p>Social Links</p></li>
+            <li id="face"><p><a href="">Facebook page</a></p></li>
+            <li id="tik"><p><a href="">TikTok</a></p></li>
+            <li id="tele"><p><a href="">Telegram</a></p></li>
+            <li id="you"><p><a href="">YouTube</a></p></li>
+            <li id="twit"><p><a href="">Twitter</a></p></li>
+            <li id="linked"><p><a href="">068 *** 7**</a></p></li>
+        </ul>
+        <ul class="third-ul">
+            <li id="social"><p>Book Store</p></li>
+            <li id="face"><p><a href="">HTML Book</a></p></li>
+            <li id="tik"><p><a href="">CSS Book</a></p></li>
+            <li id="tele"><p><a href="">JavaScript Book</a></p></li>
+            <li id="you"><p><a href="">Python Book</a></p></li>
+            <li id="twit"><p><a href="">C# Book</a></p></li>
+            <li id="linked"><p><a href="">Java Book</a></p></li>
+        </ul>
+        <ul class="fourth-ul">
+            <li id="social"><p>Terms of Use</p></li>
+            <li id="face"><p><a href="">Privacy Policy</a></p></li>
+            <li id="tik"><p><a href="">User Agreement</a></p></li>
+            <li id="tele"><p><a href="">Cookies Policy</a></p></li>
+        </ul>
+    </footer>
+
+    
+
+    <script src="./main.js"></script>
+
+</script>
+
+</body>
+
+</html>
