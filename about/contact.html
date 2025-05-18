@@ -1,88 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">  
-    <title>About Magic book </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Contact Magic Book</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+
+      /* CSS Variables for reusability */
+      :root {
+        --primary-color: #007bff;
+        --primary-hover: #0056b3;
+        --dark-bg: #222;
+        --dark-element: #333;
+        --dark-input: #444;
+        --dark-border: #555;
+        --light-bg: #f4f4f4;
+        --light-element: #fff;
+        --text-light: #333;
+        --text-dark: #e0e0e0;
+        --dark-accent: #4dabf7;
+        --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        --shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.3);
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --border-radius: 4px;
+        --transition: all 0.3s;
+      }
+
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: var(--light-bg);
+        color: var(--text-light);
+        transition: var(--transition);
+      }
+
+      /* Background Image */
+      .element img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        filter: blur(2px);
+      }
+
+      /* Form Container */
+      .container-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 80px);
+        padding: var(--spacing-lg);
+        gap: var(--spacing-lg);
+        flex-wrap: wrap;
+        margin-top: 35px;
+      }
+
+      .wrapper,
+      .sign-up {
+        background-color: var(--light-element);
+        padding: var(--spacing-lg);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        width: 100%;
+        max-width: 400px;
+        margin-top: 60px;
+      }
+
+      .sign-up {
+        display: none;
+        text-align: center;
+      }
+
+      .wrapper h2,
+      .sign-up h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: var(--text-light);
+      }
+
+      /* Input Fields */
+      .input-field {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+
+      .input-field input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: var(--border-radius);
+        outline: none;
+        font-size: 1rem;
+      }
+
+      .input-field label {
+        position: absolute;
+        top: 50%;
+        left: 0.75rem;
+        transform: translateY(-50%);
+        color: #999;
+        pointer-events: none;
+        transition: all 0.2s;
+      }
+
+      .input-field input:focus + label,
+      .input-field input:not(:placeholder-shown) + label {
+        top: -0.5rem;
+        left: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--primary-color);
+        background-color: var(--light-element);
+        padding: 0 0.2rem;
+      }
+
+      /* Forget Password Section */
+      .forget {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .forget label {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+      }
+
+      .forget a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      .forget a:hover {
+        text-decoration: underline;
+      }
+
+      /* Buttons */
+      .btn-sign {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: var(--primary-color);
+        color: var(--light-element);
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      .btn-sign:hover {
+        background-color: var(--primary-hover);
+      }
+
+      /* Register and Back to Login */
+      .register,
+      .back-to-login {
+        text-align: center;
+        margin-top: var(--spacing-md);
+      }
+
+      .register a,
+      .back-to-login a {
+        color: var(--primary-color);
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .register a:hover,
+      .back-to-login a:hover {
+        text-decoration: underline;
+      }
+
+      /* Sign-up Icons */
+      .sign-icon {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .sign-icon i {
+        font-size: 1.5rem;
+        color: var(--text-light);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .sign-icon i:hover {
+        color: var(--primary-color);
+      }
+
+      /* Dark Mode */
+      body.dark {
+        background-color: var(--dark-bg);
+        color: var(--text-dark);
+      }
+
+      body.dark .wrapper,
+      body.dark .sign-up {
+        background-color: var(--dark-element);
+        box-shadow: var(--shadow-dark);
+      }
+
+      body.dark .wrapper h2,
+      body.dark .sign-up h2 {
+        color: var(--text-dark);
+      }
+
+      body.dark .input-field input {
+        background-color: var(--dark-input);
+        border-color: var(--dark-border);
+        color: var(--text-dark);
+      }
+
+      body.dark .input-field label {
+        color: #aaa;
+      }
+
+      body.dark .btn-sign {
+        background-color: var(--dark-accent);
+      }
+
+      body.dark .btn-sign:hover {
+        background-color: #339af0;
+      }
+
+      body.dark .sign-icon i {
+        color: var(--text-dark);
+      }
+
+      body.dark .sign-icon i:hover {
+        color: var(--dark-accent);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container-form {
+          padding: var(--spacing-md);
+        }
+
+        .wrapper,
+        .sign-up {
+          padding: var(--spacing-md);
+          margin-top: 50px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .wrapper,
+        .sign-up {
+          padding: var(--spacing-sm);
+          margin-top: 40px;
+        }
+
+        .input-field input {
+          padding: 0.5rem;
+          font-size: 0.9rem;
+        }
+
+        .btn-sign {
+          padding: 0.5rem;
+          font-size: 0.9rem;
+        }
+
+        .sign-icon i {
+          font-size: 1.2rem;
+        }
+      }
+
+      /* Footer Styles */
+      footer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: var(--dark-element);
+        padding: var(--spacing-lg);
+        color: var(--text-dark);
+      }
+
+      footer ul {
+        list-style: none;
+        margin: var(--spacing-md) 0;
+      }
+
+      footer ul li {
+        margin: var(--spacing-sm) 0;
+      }
+
+      footer ul li#social {
+       
+        margin-bottom: var(--spacing-md);
+      }
+
+      footer ul li a {
+        color: var(--text-dark);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      footer ul li a:hover {
+        color: #ffd700;
+      }
+
+      footer .first-ul {
+        display: flex;
+        gap: var(--spacing-md);
+      }
+
+      footer .first-ul i {
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        transition: var(--transition);
+      }
+
+      footer .first-ul i:hover {
+               color: #ffd700;
+
+      }
+
+      @media (max-width: 768px) {
+        footer {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        footer .first-ul {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="element"><img src="../image/bg-body.avif" alt="" /></div>
     <!-- Navigation Container -->
     <div class="nav-container">
-      <img src="../image/my-logo.png" alt="Logo">
+      <img src="../image/logo-seangmeng.png" alt="Logo" />
       <nav>
-          <ul class="menu">
-              <li><a href="../index.html" >Home</a></li>
-              <li><a href="./about.html">About</a></li>
-              <li><a href="./contact.html " class="active" >Contact</a></li>
-          </ul>
+        <ul class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html" class="active">Contact</a></li>
+        </ul>
       </nav>
       <div class="search">
-          <input type="search" placeholder="Search" class="search-input">
-          <button class="btn">Sign up pro <i class="fa-solid fa-user-plus"></i></button>
-          <button class="dark-mode"><i class="fa-solid fa-sun"></i></button>
+        <input type="search" placeholder="Search" class="search-input" />
+        <button class="btn">
+          Sign up pro <i class="fa-solid fa-user-plus"></i>
+        </button>
+        <button class="dark-mode"><i class="fa-solid fa-sun"></i></button>
       </div>
       <!-- Hamburger Icon for mobile view -->
-      <button id="menuIcon" onclick="toggleMenu()">
-        <i class="fa fa-bars" id="hamburgerIcon"></i>  <!-- Hamburger icon -->
-        <i class="fa fa-times" id="closeIcon" style="display: none;"></i>  <!-- X icon (hidden by default) -->
-    </button>
-  </div>
+      <button id="menuIcon" aria-label="Toggle navigation menu">
+        <i class="fa fa-bars" id="hamburgerIcon"></i>
+        <i class="fa fa-times" id="closeIcon" style="display: none"></i>
+      </button>
+    </div>
 
-
- 
+    <!-- Form Container -->
     <div class="container-form">
       <div class="wrapper">
         <form action="#">
           <h2>Login</h2>
           <div class="input-field">
-            <input type="text" required>
+            <input type="text" required />
             <label>Enter your email</label>
           </div>
           <div class="input-field">
-            <input type="password" required>
+            <input type="password" required />
             <label>Enter your password</label>
           </div>
           <div class="forget">
             <label for="remember">
-              <input type="checkbox" id="remember">
+              <input type="checkbox" id="remember" />
               <p>Remember me</p>
             </label>
             <a href="#">Forgot password?</a>
           </div>
-          <button class="btn-sign" type="submit">Log In</button>
+          <button class="btn-sign" id="login" type="submit">Log In</button>
           <div class="register">
-            <p>Don't have an account? <a href="#">Register</a></p>
+            <p>Don't have an account? <a id="registerLink">Register</a></p>
           </div>
         </form>
       </div>
 
       <div class="sign-up">
-        <h1>Sign in</h1>  
+        <h2>Sign up</h2>
         <div class="sign-icon">
           <i class="fa-brands fa-apple"></i>
           <i class="fa-brands fa-google"></i>
           <i class="fa-solid fa-envelope"></i>
           <i class="fa-brands fa-telegram"></i>
         </div>
-        <div class="group-sign">
-          <label for="username"> Username</label> <br>
-          <input type="text" name="username" class="username" placeholder="username" required>
+        <div class="input-field">
+          <input type="text" name="username" required />
+          <label>Enter your username</label>
         </div>
-        <div class="group-sign">
-          <label for="email"> Email</label> <br>
-          <input type="text" name="email" class="email" placeholder="email" required>
+        <div class="input-field">
+          <input type="text" name="email" required />
+          <label>Enter your email</label>
         </div>
-        <div class="group-sign">
-          <label for="password"> Password</label> <br>
-          <input type="text" name="password" class="password" placeholder="password" required>
+        <div class="input-field">
+          <input type="password" name="password" required />
+          <label>Enter your password</label>
         </div>
-        <button class="btn-sign" type="submit"> Sign in</button>
+        <button class="btn-sign" id="signup" type="submit">Sign Up</button>
+        <div class="back-to-login">
+          <p>Already have an account? <a id="loginLink">Back to Login</a></p>
+        </div>
       </div>
     </div>
 
-    <script src="../main.js"></script>
-  
-</body>
+    <!-- Footer Section -->
+    <footer>
+      <ul class="first-ul">
+        <li>
+          <a href="https://www.facebook.com/SEAV11112222"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@seavtheonlyone"
+            ><i class="bx bxl-tiktok"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://t.me/seangmengZz"><i class="bx bxl-telegram"></i></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@seavmengzz"
+            ><i class="bx bxl-youtube"></i
+          ></a>
+        </li>
+      </ul>
+      <ul class="second-ul">
+        <li id="social">Social Links</li>
+        <li id="face">
+          <a href="https://www.facebook.com/SEAV11112222">Facebook</a>
+        </li>
+        <li id="tik">
+          <a href="https://www.tiktok.com/@seavtheonlyone">TikTok</a>
+        </li>
+        <li id="tele"><a href="https://t.me/seangmengZz">Telegram</a></li>
+        <li id="you">
+          <a href="https://www.youtube.com/@seavmengzz">YouTube</a>
+        </li>
+      </ul>
+      <ul class="third-ul">
+        <li id="social">Book Store</li>
+        <li id="face">
+          <a
+            href="https://www.w3schools.com/html/html_intro.asp"
+            target="_blank"
+            >HTML Book</a
+          >
+        </li>
+        <li id="tik">
+          <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank"
+            >CSS Book</a
+          >
+        </li>
+        <li id="tele">
+          <a href="https://www.w3schools.com/js/js_intro.asp" target="_blank"
+            >JavaScript Book</a
+          >
+        </li>
+        <li id="you">
+          <a
+            href="https://www.w3schools.com/python/python_intro.asp"
+            target="_blank"
+            >Python Book</a
+          >
+        </li>
+      </ul>
+      <ul class="fourth-ul">
+        <li id="social">More Information</li>
+        <li id="face"><a href="#">Sign up</a></li>
+        <li id="tik"><a href="#">Why created this website</a></li>
+        <li id="tele"><a href="#">Contact me</a></li>
+      </ul>
+    </footer>
+
+    <script>
+      // Hamburger Menu Toggle
+      function toggleMenu() {
+        const menu = document.querySelector(".menu");
+        const hamburgerIcon = document.getElementById("hamburgerIcon");
+        const closeIcon = document.getElementById("closeIcon");
+
+        if (menu && hamburgerIcon && closeIcon) {
+          menu.classList.toggle("active");
+          hamburgerIcon.style.display = menu.classList.contains("active")
+            ? "none"
+            : "block";
+          closeIcon.style.display = menu.classList.contains("active")
+            ? "block"
+            : "none";
+        }
+      }
+
+      // Attach toggleMenu to menuIcon click
+      document.getElementById("menuIcon")?.addEventListener("click", toggleMenu);
+
+      // Dark Mode Toggle
+      document.querySelector(".dark-mode")?.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const icon = document.querySelector(".dark-mode i");
+        if (icon) {
+          icon.classList.toggle("fa-sun");
+          icon.classList.toggle("fa-moon");
+        }
+      });
+
+      // Register Link Toggle
+      document.getElementById("registerLink")?.addEventListener("click", (e) => {
+        e.preventDefault();
+        const wrapper = document.querySelector(".wrapper");
+        const signUp = document.querySelector(".sign-up");
+        if (wrapper && signUp) {
+          wrapper.style.display = "none";
+          signUp.style.display = "block";
+        }
+      });
+
+      // Back to Login Link Toggle
+      document.getElementById("loginLink")?.addEventListener("click", (e) => {
+        e.preventDefault();
+        const wrapper = document.querySelector(".wrapper");
+        const signUp = document.querySelector(".sign-up");
+        if (wrapper && signUp) {
+          wrapper.style.display = "block";
+          signUp.style.display = "none";
+        }
+      });
+
+      // Login Button Alert
+      document.getElementById("login")?.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("Login successfully");
+      });
+
+      // Sign Up Button Alert (Optional)
+      document.getElementById("signup")?.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("Sign up successfully");
+      });
+    </script>
+  </body>
 </html>
