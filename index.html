@@ -1,265 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="LING Electronic Book Store - Explore tech books with search, dark mode, and exclusive discounts!"
-    />
-    <title>Magic Book</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./css/style.css">
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/scrollreveal"></script>
-  </head>
-  <body>
-    <!-- Navigation Container -->
-    <div class="nav-container">
-      <img src="./image/logo-seangmeng.png" alt="LING E-Book Store Logo" />
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about/about.html">About</a></li>
-          <li><a href="about/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="search">
-        <input
-          type="search"
-          placeholder="Search books..."
-          class="search-input"
-          aria-label="Search books"
-        />
-        <button class="btn" aria-label="Sign up for premium">
-          <a href="./about/contact.html">Sign up <i class="fa-solid fa-user-plus"></i> </a>
-        </button>
-        <button class="dark-mode" aria-label="Toggle dark mode">
-          <i class="fa-solid fa-moon"></i>
-        </button>
-      </div>
-      <button id="menuIcon" aria-label="Toggle menu">
-        <i class="fa fa-bars" id="hamburgerIcon"></i>
-        <i class="fa fa-times" id="closeIcon" style="display: none"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="LING Electronic Book Store - Explore tech books with search, dark mode, and exclusive discounts!" />
+  <title>Magic Book</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <!-- Navigation Container -->
+  <div class="nav-container">
+    <img src="./image/logo-seangmeng.png" alt="" />
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about/about.html">About</a></li>
+        <li><a href="about/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search">
+      <input type="search" placeholder="Search books..." class="search-input" aria-label="Search books" />
+      <button class="btn" aria-label="Sign up for premium">
+        <a href="./about/contact.html">Sign up <i class="fa-solid fa-user-plus"></i> </a>
+      </button>
+      <button class="dark-mode" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
       </button>
     </div>
+    <button id="menuIcon" aria-label="Toggle menu">
+      <i class="fa fa-bars" id="hamburgerIcon"></i>
+      <i class="fa fa-times" id="closeIcon" style="display: none"></i>
+    </button>
+  </div>
 
-    <!-- Header Section -->
-    <header class="scroll-reveal">
-      <div class="letter">
-        <h1>SM - ELECTRONIC BOOK</h1>
-        <p>
-          Welcome to a world of web development! This book guides you through
-          essential web technologies, from <span>HTML</span> and
-          <span>CSS</span> to modern <span>JavaScript</span> frameworks and
-          backend systems. Whether you're a beginner or a pro, this guide will
-          help you excel in the fast-evolving digital landscape. Start building
-          the future of the web!
-        </p>
-      </div>
-      <div class="head-galla">
-        <img src="image/world.png" alt="Illustration of a digital world" />
-      </div>
-    </header>
+  <!-- Header Section -->
+  <header class="scroll-reveal">
+    <div class="letter">
+      <h1>SM - ELECTRONIC BOOK</h1>
+      <p>
+        Welcome to a world of web development! This book guides you through
+        essential web technologies, from <span>HTML</span> and
+        <span>CSS</span> to modern <span>JavaScript</span> frameworks and
+        backend systems. Whether you're a beginner or a pro, this guide will
+        help you excel in the fast-evolving digital landscape. Start building
+        the future of the web!
+      </p>
+    </div>
+    <div class="head-galla">
+      <img src="image/book.gif" alt="" />
+    </div>
+  </header>
 
-    <!-- Book Categories Section -->
-    <div class="container scroll-reveal">
-      <div class="content scroll-reveal">
-        <div class="card" data-id="1">
-          <p>Tech - Book</p>
-          <img src="image/book.jpeg" alt="Tech Book Cover" />
-          <button class="free">Read for Free</button>
-        </div>
+  <!-- Book Categories Section -->
+  <div class="container scroll-reveal">
+    <div class="content scroll-reveal">
+      <div class="card" data-id="1">
+        <p>Tech - Book</p>
+        <img src="image/book.jpeg" alt="Tech Book Cover" />
+        <button class="free">Read for Free</button>
       </div>
-      <div class="content scroll-reveal">
-        <div class="card" data-id="2">
-          <p>Programming Languages</p>
-          <img
-            src="image/programing.png"
-            alt="Programming Languages Book Cover"
-          />
-          <button class="free">Read for Free</button>
-        </div>
+    </div>
+    <div class="content scroll-reveal">
+      <div class="card" data-id="2">
+        <p>Programming Languages</p>
+        <img src="image/programing.png" alt="Programming Languages Book Cover" />
+        <button class="free">Read for Free</button>
       </div>
-      <div class="content scroll-reveal">
-        <div class="card" data-id="3">
-          <p>Artificial Intelligence</p>
-          <img src="image/AI.webp" alt="Artificial Intelligence Book Cover" />
-          <button class="free">Read for Free</button>
-        </div>
+    </div>
+    <div class="content scroll-reveal">
+      <div class="card" data-id="3">
+        <p>Artificial Intelligence</p>
+        <img src="image/AI.webp" alt="Artificial Intelligence Book Cover" />
+        <button class="free">Read for Free</button>
       </div>
-      <div class="content scroll-reveal">
-        <div class="card" data-id="4">
-          <p>Java</p>
-          <img src="image/sec-java.webp" alt="Java Book Cover" />
-          <button class="free">Read for Free</button>
-        </div>
+    </div>
+    <div class="content scroll-reveal">
+      <div class="card" data-id="4">
+        <p>Java</p>
+        <img src="image/sec-java.webp" alt="Java Book Cover" />
+        <button class="free">Read for Free</button>
       </div>
-      <div class="content scroll-reveal">
-        <div class="card" data-id="5">
-          <p>Python</p>
-          <img src="image/python.png" alt="Python Book Cover" />
-          <button class="free">Read for Free</button>
-        </div>
+    </div>
+    <div class="content scroll-reveal">
+      <div class="card" data-id="5">
+        <p>Python</p>
+        <img src="image/python.png" alt="Python Book Cover" />
+        <button class="free">Read for Free</button>
       </div>
-      <div class="content scroll-reveal">
-        <div class="card" data-id="6">
-          <p>PHP</p>
-          <img src="image/php.png" alt="PHP Book Cover" />
-          <button class="free">Read for Free</button>
-        </div>
+    </div>
+    <div class="content scroll-reveal">
+      <div class="card" data-id="6">
+        <p>PHP</p>
+        <img src="image/php.png" alt="PHP Book Cover" />
+        <button class="free">Read for Free</button>
       </div>
-      <div class="content scroll-reveal">
-        <div class="card" data-id="7">
-          <p>Cyber Security</p>
-          <img src="image/cyber.jpeg" alt="Cyber Security Book Cover" />
-          <button class="premium">
-            Coming soon <i class="fa-solid fa-star-and-crescent"></i>
-          </button>
-        </div>
+    </div>
+    <div class="content scroll-reveal">
+      <div class="card" data-id="7">
+        <p>Cyber Security</p>
+        <img src="image/cyber.jpeg" alt="Cyber Security Book Cover" />
+        <button class="premium">
+          Coming soon <i class="fa-solid fa-star-and-crescent"></i>
+        </button>
       </div>
-      <div class="content scroll-reveal">
-        <div class="card" data-id="8">
-          <p>Hacking & Cracking</p>
-          <img src="image/hack.jpg" alt="Hacking & Cracking Book Cover" />
-          <button class="premium">
-            Coming soon <i class="fa-solid fa-star-and-crescent"></i>
-          </button>
-        </div>
+    </div>
+    <div class="content scroll-reveal">
+      <div class="card" data-id="8">
+        <p>Hacking & Cracking</p>
+        <img src="image/hack.jpg" alt="Hacking & Cracking Book Cover" />
+        <button class="premium">
+          Coming soon <i class="fa-solid fa-star-and-crescent"></i>
+        </button>
       </div>
-      <div class="content scroll-reveal">
-        <div class="card" data-id="9">
-          <p>Crypto & Forex-Trading</p>
-          <img
-            src="image/sec-forex.avif"
-            alt="Crypto & Forex-Trading Book Cover"
-          />
-          <button class="premium">
-            Coming soon <i class="fa-solid fa-star-and-crescent"></i>
-          </button>
+    </div>
+    <div class="content scroll-reveal">
+      <div class="card" data-id="9">
+        <p>Crypto & Forex-Trading</p>
+        <img src="image/sec-forex.avif" alt="Crypto & Forex-Trading Book Cover" />
+        <button class="premium">
+          Coming soon <i class="fa-solid fa-star-and-crescent"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Founder Section -->
+  <section class="section-1 scroll-reveal">
+    <div class="main-container scroll-reveal">
+      <div class="my-pic scroll-reveal">
+        <img src="./image/meee.jpg" alt="" />
+      </div>
+      <div class="script">
+        <div class="title-me">SM E-BOOK FOUNDER</div>
+        <div class="about-me">
+          <p>
+            Hello dear readers! I am
+            <span> Seang Meng</span>
+            the creator of this e-book platform, with a deep passion for technology and storytelling. I love exploring
+            how digital innovation shapes our narratives and connects us with ideas. By blending traditional book
+            creation with modern technology, I aim to provide a unique reading experience for today’s tech-savvy
+            audience.
+          </p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Founder Section -->
-    <section class="section-1 scroll-reveal">
-      <div class="main-container scroll-reveal">
-        <div class="my-pic scroll-reveal">
-          <img
-            src="./image/meee.jpg"
-            alt="Portrait of Chhoeun Seavmeng, Founder of LING E-Book Store"
-          />
-        </div>
-        <div class="script">
-          <div class="title-me">SM E-BOOK FOUNDER</div>
-          <div class="about-me">
-            <p>
-              ជំរាបសួរអ្នកអានជាទីស្រឡាញ់! ខ្ញុំបាទ​
-              <span>ឈឺន សៀងម៉េង</span> ដែលជាអ្នកបង្កើតវេទិកាសៀវភៅអេឡិចត្រូនិចនេះ
-              ដែលមានចំណង់ចំណូលចិត្តយ៉ាងជ្រាលជ្រៅចំពោះបច្ចេកវិទ្យា
-              និងការនិទានរឿង។
-              ខ្ញុំចូលចិត្តស្វែងយល់ពីរបៀបដែលការច្នៃប្រឌិតឌីជីថលបង្កើតការនិទានរឿងរបស់យើង
-              ហើយភ្ជាប់យើងជាមួយនឹងគំនិត។
-              តាមរយៈការលាយបញ្ចូលគ្នានៃការបង្កើតសៀវភៅបុរាណជាមួយនឹងបច្ចេកវិទ្យាទំនើប
-              ខ្ញុំមានគោលបំណងផ្តល់នូវបទពិសោធន៍នៃការអានដ៏ពិសេសមួយសម្រាប់ទស្សនិកជនដែលយល់អំពីបច្ចេកវិទ្យានាពេលបច្ចុប្បន្ននេះ។
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Promotion Section -->
-    <div class="hold scroll-reveal">
-      <div class="collect scroll-reveal">
-        <div class="cele">
-          <div class="pchum">
-            <p class="happy">សួស្តីឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ!</p>
-            <p class="border">បញ្ចុះតម្លៃ 70%</p>
-            <p>
-              ទាញយកអត្ថប្រយោជន៍ពីការលក់<strong>ការបញ្ចុះតម្លៃ 70%</strong>
-              របស់យើង! សម្រាប់ពេលវេលាមានកំណត់
-              សូមរីករាយជាមួយការសន្សំដ៏ធំលើការជ្រើសរើសសៀវភៅជាច្រើន។
-              មិនថាអ្នកកំពុងចូលប្រឌិត រឿងមិនប្រឌិត ឬស្វែងរកអ្វីថ្មីទេ
-              ឥឡូវនេះជាពេលវេលាដ៏ល្អឥតខ្ចោះដើម្បីចាប់យកការអានបន្ទាប់របស់អ្នកក្នុងតម្លៃប្រភាគ។
-              ប្រញាប់ឡើង ការផ្ដល់ជូននេះមិនយូរទេ!
-            </p>
-          </div>
+  <!-- Promotion Section -->
+  <div class="hold scroll-reveal">
+    <div class="collect scroll-reveal">
+      <div class="cele">
+        <div class="pchum">
+          <p class="happy">Happy Khmer New Year</p>
+          <p class="border">Discount 70%</p>
+          <p>
+            Take advantage of our 70% off sale! For a limited time, enjoy huge savings on a wide selection of books.
+            Whether you're into fiction, non-fiction, or looking for something new, now's the perfect time to grab your
+            next read at a fraction of the price. Hurry, this offer won't last long!
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Contact Us Button -->
-    <section>
-      <a href="./about/contact.html" class="link-con">Contact Us Now!</a>
-    </section>
+  <!-- Contact Us Button -->
+  <section>
+    <a href="./about/contact.html" class="link-con">Contact Us Now!</a>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-      <ul class="first-ul">
-        <li>
-          <a href="https://www.facebook.com/SEAV11112222"
-            ><i class="bx bxl-facebook"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.tiktok.com/@seavtheonlyone"
-            ><i class="bx bxl-tiktok"></i
-          ></a>
-        </li>
-        <li>
-            <a href="https://t.me/seangmengZz"><i class="bx bxl-telegram"></i></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/@seavmengzz"
-            ><i class="bx bxl-youtube"></i
-          ></a>
-        </li>
-      </ul>
-      <ul class="second-ul">
-        <li id="social">Social Links</li>
-        <li id="face">
-          <a href="https://www.facebook.com/SEAV11112222">Facebook</a>
-        </li>
-        <li id="tik">
-          <a href="https://www.tiktok.com/@seavtheonlyone">TikTok</a>
-        </li>
-        <li id="tele"><a href="https://t.me/seangmengZz">Telegram</a></li>
-        <li id="you">
-          <a href="https://www.youtube.com/@seavmengzz">YouTube</a>
-        </li>
-      </ul>
-       <ul class="third-ul">
-        <li id="social">Book Store</li>
-        <li id="face"><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">HTML Book</a></li>
-        <li id="tik"><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">CSS Book</a></li>
-        <li id="tele"><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank">JavaScript Book</a></li>
-        <li id="you"><a href="https://www.w3schools.com/python/python_intro.asp" target="_blank">Python Book</a></li>
-      </ul>
-      <ul class="fourth-ul">
-        <li id="social">More infomation</li>
-        <li id="face"><a href="#">Sign up</a></li>
-        <li id="tik"><a href="#">Why created this website</a></li>
-        <li id="tele"><a href="#">Contact me</a></li>
-      </ul>
-    </footer>
+  <!-- Footer Section -->
+  <footer>
+    <ul class="first-ul">
+      <li>
+        <a href="https://www.facebook.com/SEAV11112222"><i class="bx bxl-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://www.tiktok.com/@seavtheonlyone"><i class="bx bxl-tiktok"></i></a>
+      </li>
+      <li>
+        <a href="https://t.me/seangmengZz"><i class="bx bxl-telegram"></i></a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@seavmengzz"><i class="bx bxl-youtube"></i></a>
+      </li>
+    </ul>
+    <ul class="second-ul">
+      <li id="social">Social Links</li>
+      <li id="face">
+        <a href="https://www.facebook.com/SEAV11112222">Facebook</a>
+      </li>
+      <li id="tik">
+        <a href="https://www.tiktok.com/@seavtheonlyone">TikTok</a>
+      </li>
+      <li id="tele"><a href="https://t.me/seangmengZz">Telegram</a></li>
+      <li id="you">
+        <a href="https://www.youtube.com/@seavmengzz">YouTube</a>
+      </li>
+    </ul>
+    <ul class="third-ul">
+      <li id="social">Book Store</li>
+      <li id="face"><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">HTML Book</a></li>
+      <li id="tik"><a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">CSS Book</a></li>
+      <li id="tele"><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank">JavaScript Book</a></li>
+      <li id="you"><a href="https://www.w3schools.com/python/python_intro.asp" target="_blank">Python Book</a></li>
+    </ul>
+    <ul class="fourth-ul">
+      <li id="social">More infomation</li>
+      <li id="face"><a href="#">Sign up</a></li>
+      <li id="tik"><a href="#">Why created this website</a></li>
+      <li id="tele"><a href="#">Contact me</a></li>
+    </ul>
+  </footer>
 
-    <!-- Modal for Book Details -->
-    <div class="modal" id="bookModal">
-      <div class="modal-content">
-        <span class="close-modal" aria-label="Close modal">×</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDescription"></p>
-        <p id="modalContent"></p>
-        <button id="modalButton">Continue Reading</button>
-      </div>
+  <!-- Modal for Book Details -->
+  <div class="modal" id="bookModal">
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Close modal">×</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <p id="modalContent"></p>
+      <button id="modalButton">Continue Reading</button>
     </div>
+  </div>
 
-    <script src="./main.js"></script>
-  </body>
+  <script src="./main.js"></script>
+</body>
+
 </html>
